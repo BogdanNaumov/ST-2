@@ -17,7 +17,7 @@ TEST(CircleTest, SetRadius) {
 
 TEST(CircleTest, SetFerence) {
     Circle c;
-    c.setFerence(2 * PI);
+    c.setFerence(2 * 3.141592653589793);
     EXPECT_NEAR(c.getRadius(), 1.0, 1e-10);
     EXPECT_NEAR(c.getArea(), 3.141592653589793, 1e-10);
 }
@@ -25,7 +25,7 @@ TEST(CircleTest, SetFerence) {
 
 TEST(CircleTest, SetArea) {
     Circle c;
-    c.setArea(PI);
+    c.setArea(3.141592653589793);
     EXPECT_NEAR(c.getRadius(), 1.0, 1e-10);
     EXPECT_NEAR(c.getFerence(), 2 * 3.141592653589793, 1e-10);
 }
