@@ -17,7 +17,7 @@ double zd_2() {
 
     pool.setRadius(3);
     double track_cost = (pow(pool.getRadius() + 1, 2) * 3.141592653589793 
-                    - pool.getArea());
+    - pool.getArea());
 
     bound.setRadius(pool.getRadius() + 1);
     double bound_cost = bound.getFerence() * 2000;

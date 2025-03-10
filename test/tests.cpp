@@ -2,8 +2,11 @@
 
 #include "tasks.h"
 #include "circle.h"
+
 #include <cmath>
+
 #include "gtest/gtest.h"
+
 
 const double PI = 3.141592653589793;
 
@@ -52,8 +55,8 @@ TEST(CircleTest, Zd1) {
 
 TEST(CircleTest, Zd2) {
     double result = zd_2();
-    double expectedTrackCost = (pow(3 + 1, 2) * PI 
-                               - PI * 9) * 1000;
+    double expectedTrackCost = (pow(3 + 1, 2) * PI
+     - PI * 9) * 1000;
     double expectedBoundCost = 2 * PI * (3 + 1) * 2000;
     EXPECT_NEAR(result, expectedTrackCost + expectedBoundCost, 1e-2);
 }
