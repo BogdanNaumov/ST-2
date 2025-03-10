@@ -6,7 +6,7 @@
 void Circle::setRadius(double tmp) {
     radius = tmp;
     ference = 2 * 3.141592653589793 * radius;
-    area = 3.14159 * radius * radius;
+    area = 3.141592653589793 * radius * radius;
 }
 
 void Circle::setFerence(double tmp) {
