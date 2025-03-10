@@ -1,7 +1,8 @@
-#include "gtest/gtest.h"
+// Copyright 2025 UNN-CS Team
 #include "tasks.h"
 #include "circle.h"
 #include <cmath>
+#include "gtest/gtest.h"
 
 const double PI = 3.141592653589793; 
 
