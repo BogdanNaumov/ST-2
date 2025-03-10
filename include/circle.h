@@ -3,13 +3,14 @@
 #define INCLUDE_CIRCLE_H_
 #include <cstdint>
 
-const double PI = 3.141592653589793238462;
+
 
 class Circle {
  private:
     double radius;
     double ference;
     double area;
+    const double PI = 3.141592653589793;
 
  public:
     void setRadius(double tmp);
