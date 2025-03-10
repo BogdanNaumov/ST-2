@@ -10,7 +10,6 @@ class Circle {
     double radius;
     double ference;
     double area;
-    const double PI = 3.141592653589793;
 
  public:
     void setRadius(double tmp);
