@@ -3,38 +3,32 @@
 #include <cmath>
 #include "circle.h"
 
-void Circle::setRadius(double tmp)
-{
+void Circle::setRadius(double tmp){
     radius = tmp;
     ference = 2 * 3.14159 * radius;
     area = 3.14159 * radius * radius;
 }
 
-void Circle::setFerence(double tmp)
-{
+void Circle::setFerence(double tmp){
     ference = tmp;
     radius = ference / (2 * 3.14159);
     area = 3.14159 * radius * radius;
 }
 
-void Circle::setArea(double tmp)
-{
+void Circle::setArea(double tmp){
     area = tmp;
     radius = sqrt(area / 3.14159);
     ference = 2 * 3.14159 * radius;
 }
 
-double Circle::getRadius()
-{
+double Circle::getRadius(){
     return radius;
 }
 
-double Circle::getFerence()
-{
+double Circle::getFerence(){
     return ference;
 }
 
-double Circle::getArea()
-{
+double Circle::getArea(){
     return area;
 }

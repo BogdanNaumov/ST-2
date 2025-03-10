@@ -2,8 +2,7 @@
 #include "tasks.h"
 #include <cmath>
 
-double zd_1()
-{
+double zd_1(){
     Circle tmp;
 
     double earth = 6378.1;
@@ -12,8 +11,7 @@ double zd_1()
     return tmp.getFerence();
 }
 
-double zd_2()
-{
+double zd_2(){
     Circle pool;
     Circle bound;
 
