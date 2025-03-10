@@ -1,11 +1,11 @@
 // Copyright 2023 Your Name or Organization
 
+#include <cmath>
+#include "gtest/gtest.h"
+
 #include "tasks.h"
 #include "circle.h"
 
-#include <cmath>
-
-#include "gtest/gtest.h"
 
 
 const double PI = 3.141592653589793;
