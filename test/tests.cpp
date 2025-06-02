@@ -187,7 +187,7 @@ TEST(CircleTest, Zd2ZeroRadius) {
     Circle bound;
     bound.setRadius(pool.getRadius() + 1);
     
-    double track_cost = (pow(1, 2) * PI * 1000;
+    double track_cost = pow(1, 2) * PI * 1000;
     double bound_cost = bound.getFerence() * 2000;
     
     EXPECT_DOUBLE_EQ(track_cost + bound_cost, 1000*PI + 4000*PI);
