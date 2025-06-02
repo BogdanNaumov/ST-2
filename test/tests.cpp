@@ -106,14 +106,14 @@ TEST(CircleTest, NegativeRadius) {
     c.setRadius(-5.0);
     EXPECT_DOUBLE_EQ(c.getRadius(), -5.0);
     EXPECT_DOUBLE_EQ(c.getFerence(), -10 * PI);
-    EXPECT_DOUBLE_EQ(c.getArea(), -25 * PI);
+    EXPECT_DOUBLE_EQ(c.getArea(), 25 * PI);
 }
 
 TEST(CircleTest, NegativeFerence) {
     Circle c;
     c.setFerence(-10 * PI);
     EXPECT_DOUBLE_EQ(c.getRadius(), -5.0);
-    EXPECT_DOUBLE_EQ(c.getArea(), -25 * PI);
+    EXPECT_DOUBLE_EQ(c.getArea(), 25 * PI);
 }
 
 TEST(CircleTest, NegativeArea) {
