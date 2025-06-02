@@ -6,8 +6,6 @@
 #include "tasks.h"
 #include "circle.h"
 
-
-
 const double PI = 3.141592653589793;
 
 TEST(CircleTest, SetRadius) {
@@ -55,8 +53,7 @@ TEST(CircleTest, Zd1) {
 
 TEST(CircleTest, Zd2) {
     double result = zd_2();
-    double expectedTrackCost = (pow(3 + 1, 2) * PI
-     - PI * 9) * 1000;
+    double expectedTrackCost = (pow(3 + 1, 2) * PI - PI * 9) * 1000;
     double expectedBoundCost = 2 * PI * (3 + 1) * 2000;
     EXPECT_NEAR(result, expectedTrackCost + expectedBoundCost, 1e-2);
 }
@@ -141,16 +138,16 @@ TEST(CircleTest, HugeRadius) {
 
 TEST(CircleTest, SequentialUpdates) {
     Circle c;
-    
+
     c.setRadius(2.0);
     EXPECT_DOUBLE_EQ(c.getRadius(), 2.0);
     EXPECT_DOUBLE_EQ(c.getFerence(), 4 * PI);
     EXPECT_DOUBLE_EQ(c.getArea(), 4 * PI);
-    
+
     c.setFerence(6 * PI);
     EXPECT_DOUBLE_EQ(c.getRadius(), 3.0);
     EXPECT_DOUBLE_EQ(c.getArea(), 9 * PI);
-    
+
     c.setArea(16 * PI);
     EXPECT_DOUBLE_EQ(c.getRadius(), 4.0);
     EXPECT_DOUBLE_EQ(c.getFerence(), 8 * PI);
@@ -166,8 +163,8 @@ TEST(CircleTest, ZeroArea) {
 TEST(CircleTest, DoubleUpdate) {
     Circle c;
     c.setRadius(10.0);
-    c.setFerence(20 * PI); 
-    
+    c.setFerence(20 * PI);
+
     EXPECT_DOUBLE_EQ(c.getRadius(), 10.0);
     EXPECT_DOUBLE_EQ(c.getFerence(), 20 * PI);
     EXPECT_DOUBLE_EQ(c.getArea(), 100 * PI);
@@ -183,12 +180,12 @@ TEST(CircleTest, Zd1Negative) {
 TEST(CircleTest, Zd2ZeroRadius) {
     Circle pool;
     pool.setRadius(0);
-    
+
     Circle bound;
     bound.setRadius(pool.getRadius() + 1);
-    
+
     double track_cost = pow(1, 2) * PI * 1000;
     double bound_cost = bound.getFerence() * 2000;
-    
-    EXPECT_DOUBLE_EQ(track_cost + bound_cost, 1000*PI + 4000*PI);
+
+    EXPECT_DOUBLE_EQ(track_cost + bound_cost, 1000 * PI + 4000 * PI);
 }
